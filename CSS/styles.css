@@ -9,7 +9,10 @@ body {
 
 h1 {
     color: #334155;
+    text-align: center;
 }
+
+/* dropdown */
 #navbar {
   gap: 15px;
   background-color: #94a3b8;
@@ -60,10 +63,100 @@ li a {
 }
 
 
-/* #dropdownButton:hover .dropdownul {
+#dropdownButton:hover .dropdownul {
     display: block;
-} */
+}
 
 .active {
     display: block;
+}
+
+/* Carousel */
+
+:root {
+    --frame-width: 900px;
+    --frame-height: 900px
+}
+
+/* .content {
+    
+    justify-content: center;
+} */
+
+
+.frame {
+    display: flex;
+    align-items: center;
+    margin: 100px;
+    background-color: black;
+    width: var(--frame-width);
+    height: var(--frame-height);
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-button {
+    font-size: 24px;
+    color: #475569;
+    background-color: rgba(0,0,0,0.1);
+    padding: 5px;
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.carousel-button:hover,
+.carosuel-button:focus {
+    background-color: rgba(0,0,0,0.5);
+    color: #f1f5f9;
+    border: white solid 0.1px;
+}
+
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+
+
+.carousel {
+    background-color: black;
+    width: 2100px;
+    height: var(--frame-height);
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.carousel ul li img {
+    height: var(--frame-height);
+    width: var(--frame-width);
+    object-fit: cover;
+}
+
+.carousel ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    position: relative;
+}
+
+.slide {
+    
+}
+
+.move-right {
+    transform: translateX(-900px);
+    
+}
+
+.move-rright {
+    transform: translateX(-900px);
+
 }
