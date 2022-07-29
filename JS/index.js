@@ -13,36 +13,38 @@ const frame = document.querySelector('.frame')
 const frameWidth= frame.getBoundingClientRect().width;
 
 
-prev.addEventListener("click", moveToNext)
-next.addEventListener("click", moveToPrev)
+prev.addEventListener("click", moveToPrev)
+next.addEventListener("click", moveToNext)
 
 let amountToMove = 0;
 
 function moveCarousel(direction) {
     
     if (direction === "next") {
-        amountToMove += frameWidth;
+        amountToMove -= frameWidth;
     }
     if (direction === "prev") {
-        amountToMove -= frameWidth;
+        amountToMove += frameWidth;
     }
 
     carousel.style.transform = `translateX(${amountToMove}px)`;
 }
 
 function changeCurrentSlide(direction) {
-    const currentSlide = document.querySelector('current-slide')
-    console.log(currentSlide)
+    const currentSlide = document.querySelector('.current-slide')
+    console.log('current slide' + currentSlide)
     const nextSlide = currentSlide.nextElementSibling;
     const prevSlide = currentSlide.previousElementSibling;
-    console.log(nextSlide)
-    console.log(prevSlide)
+    console.log('next slide' + nextSlide)
+    console.log('prev slide' + prevSlide)
 
     if (direction === 'next') {
+        console.log('direction next')
         currentSlide.classList.remove('current-slide');
         nextSlide.classList.add('current-slide');
     }
     if (direction === 'prev') {
+        console.log('direction prev')
         currentSlide.classList.remove('current-slide');
         prevSlide.classList.add('current-slide');
     }
