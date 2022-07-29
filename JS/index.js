@@ -11,7 +11,7 @@ const next = document.querySelector('.next');
 const frame = document.querySelector('.frame')
 
 const frameWidth= frame.getBoundingClientRect().width;
-
+console.log(frameWidth)
 
 prev.addEventListener("click", moveToPrev)
 next.addEventListener("click", moveToNext)
@@ -32,22 +32,20 @@ function moveCarousel(direction) {
 
 function changeCurrentSlide(direction) {
     const currentSlide = document.querySelector('.current-slide')
-    console.log('current slide' + currentSlide)
     const nextSlide = currentSlide.nextElementSibling;
     const prevSlide = currentSlide.previousElementSibling;
-    console.log('next slide' + nextSlide)
-    console.log('prev slide' + prevSlide)
+    
 
     if (direction === 'next') {
         if (nextSlide == null) return;
-        console.log('direction next')
+        
         currentSlide.classList.remove('current-slide');
         nextSlide.classList.add('current-slide');
         moveCarousel("next")
     }
     if (direction === 'prev') {
         if (prevSlide == null) return;
-        console.log('direction prev')
+        
         currentSlide.classList.remove('current-slide');
         prevSlide.classList.add('current-slide');
         moveCarousel("prev")

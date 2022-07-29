@@ -46,6 +46,7 @@ li a {
   padding-top: 2px;
   border-radius: 0px 0px 4px 4px;
   display: none;
+  z-index: 10;
 }
 
 .dropdownul li {
