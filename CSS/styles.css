@@ -105,7 +105,8 @@ li a {
     position: absolute;
     z-index: 2;
     top: 50%;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
 .carousel-button:hover,
@@ -151,12 +152,3 @@ li a {
     
 }
 
-.move-right {
-    transform: translateX(-900px);
-    
-}
-
-.move-rright {
-    transform: translateX(-900px);
-
-}
