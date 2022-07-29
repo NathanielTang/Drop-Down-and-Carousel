@@ -10,7 +10,8 @@ const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 const frame = document.querySelector('.frame')
 
-const frameWidth= frame.getBoundingClientRect().width;
+// const frameWidth= frame.getBoundingClientRect().width;
+const frameWidth = 900;
 console.log(frameWidth)
 
 prev.addEventListener("click", moveToPrev)
