@@ -39,24 +39,28 @@ function changeCurrentSlide(direction) {
     console.log('prev slide' + prevSlide)
 
     if (direction === 'next') {
+        if (nextSlide == null) return;
         console.log('direction next')
         currentSlide.classList.remove('current-slide');
         nextSlide.classList.add('current-slide');
+        moveCarousel("next")
     }
     if (direction === 'prev') {
+        if (prevSlide == null) return;
         console.log('direction prev')
         currentSlide.classList.remove('current-slide');
         prevSlide.classList.add('current-slide');
+        moveCarousel("prev")
     }
 
 }
 
 function moveToNext() {
-    moveCarousel("next")
+   
     changeCurrentSlide("next")
 }
 
 function moveToPrev() {
-    moveCarousel("prev")
+    
     changeCurrentSlide("prev")
 }
